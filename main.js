@@ -23,11 +23,11 @@ for (let i = 0; i < Object.keys(person3).length; i++) {
         for (let w = 0; w < (Object.values(person3)[i].length); w++){
             if (typeof Object.values(person3)[i][w] == 'object'){
                 for (let k = 0; k < (Object.values(Object.values(person3)[4][0]).length); k++){
-                    console.log(Object.values(Object.values(person3)[i][w])[k])
+                    console.log(Object.keys(Object.values(person3)[i][w])[k],Object.values(Object.values(person3)[i][w])[k],(Object.keys(person3)[i]))
                 }
             }
             else {
-                console.log((Object.values(person3)[i][w]))
+                console.log((Object.values(person3)[i][w]),(Object.keys(person3)[i]))
             }
         }
     }
@@ -35,7 +35,6 @@ for (let i = 0; i < Object.keys(person3).length; i++) {
         console.log((Object.values(person3)[i]))
     }
 }
-
 //=======Exercise #2=========//
 /*
 Write an object prototype for a Person that has a name and age, has a
