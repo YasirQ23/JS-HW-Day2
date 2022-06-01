@@ -19,7 +19,21 @@ let person3 = {
 }
 
 for (let i = 0; i < Object.keys(person3).length; i++) {
-    console.log(Object.keys(person3)[i], ' : ', Object.values(person3)[i])
+    if (typeof Object.values(person3)[i] == 'object'){
+        for (let w = 0; w < (Object.values(person3)[i].length); w++){
+            if (typeof Object.values(person3)[i][w] == 'object'){
+                for (let k = 0; k < (Object.values(Object.values(person3)[4][0]).length); k++){
+                    console.log(Object.values(Object.values(person3)[i][w])[k])
+                }
+            }
+            else {
+                console.log((Object.values(person3)[i][w]))
+            }
+        }
+    }
+    else {
+        console.log((Object.values(person3)[i]))
+    }
 }
 
 //=======Exercise #2=========//
